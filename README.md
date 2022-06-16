@@ -95,7 +95,7 @@ cv2.waitKey(0)<br>
 #to show the resized image<br>
 imgresize=cv2.resize(img,(150,160))<br>
 cv2.imshow('Resized image',imgresize)<br>
-print('Resized image lenght width',imgresize.shape)<br>
+print('Resized image length, width',imgresize.shape)<br>
 cv2.waitKey(0)<br>
 **OUTPUT**<br>
 origial image length width (640, 960, 3)<br>
@@ -119,7 +119,7 @@ cv2.waitKey(0)<br>
 ret,bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
 cv2.imshow("Binary",bw_img)<br>
 cv2.waitKey(0)<br>
-cv2.destroyaAlWindows()<br>
+cv2.destroyAllWindows()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940850/174048120-9fc7d698-0466-459c-a2bf-38816501be12.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/174048200-092e4aca-f297-492e-8af8-010b96b689dc.png)<br>
