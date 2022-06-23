@@ -225,7 +225,6 @@ cv2.imwrite('output.jpg',fimg4)<br>
 
 <br>
 **13.Develop the program to change the image to different color spaces.**<br>
-#Develop the program to change the image to different color spaces.<br>
 import cv2 <br>
 img=cv2.imread("flower5.jpg")<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
@@ -242,11 +241,11 @@ cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br><br>
 <br>
 **OUTPUT**<br>
-![image](https://user-images.githubusercontent.com/97940850/175287410-60d53f53-0581-4ac6-a9a4-eab46aa7dff9.png)
-![image](https://user-images.githubusercontent.com/97940850/175287466-cef916c4-4116-48f1-b256-902942fead78.png)
-![image](https://user-images.githubusercontent.com/97940850/175287520-5dd9e8fe-db58-468d-ab86-ca919f4661c7.png)
-![image](https://user-images.githubusercontent.com/97940850/175287565-4e4287da-a5c9-4ea3-a5f9-b5373677319b.png)
-![image](https://user-images.githubusercontent.com/97940850/175287632-a1a7edf4-6c84-4550-aef8-030de594bbe0.png)
+![image](https://user-images.githubusercontent.com/97940850/175287410-60d53f53-0581-4ac6-a9a4-eab46aa7dff9.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175287466-cef916c4-4116-48f1-b256-902942fead78.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175287520-5dd9e8fe-db58-468d-ab86-ca919f4661c7.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175287565-4e4287da-a5c9-4ea3-a5f9-b5373677319b.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175287632-a1a7edf4-6c84-4550-aef8-030de594bbe0.png)<br>
 
 <br>
 **14.Program to create an image using 2D array.**<br>
