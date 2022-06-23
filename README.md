@@ -247,5 +247,17 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/97940850/175271007-9e6cc280-f7c2-494b-9fa4-0f70b0671b04.png)
 ![image](https://user-images.githubusercontent.com/97940850/175271082-f7c92ce4-161d-477f-8b4c-78a15af54dd2.png)
 
+**14.Program to create an image using 2D array.**
+import cv2 as c
+import numpy as np
+from PIL import Image
+array=np.zeros([100,200,3],dtype=np.uint8)
+array[:,:100]=[255,130,0]
+array[:,100:]=[0,0,255]
+img=Image.fromarray(array)
+img.save('flower5.jpg')
+img.show()
+c.waitKey(0)
 
-
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/175271426-a7f9f364-377a-4390-96df-e286e4bed715.png)
