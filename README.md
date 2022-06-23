@@ -134,6 +134,8 @@ plt.imshow(image)
 plt.show()
 
 **OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/175267175-16d4e9e5-a412-49b8-8d6b-9e39b29064b4.png)
 
 
+**11.Write a program to mask and blur the image.**
 
