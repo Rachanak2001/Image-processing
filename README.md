@@ -126,6 +126,14 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940850/174048342-35f42e3d-bccf-4d8b-8b8f-44b19dd6182a.png)<br>
 
 **10.Develop a program to read image using URL.**
+from skimage import io
+import matplotlib.pyplot as plt
+url='https://www.thoughtco.com/thmb/mik7Z00SAYN786BQbieXWOzZmc8=/2121x1414/filters:fill(auto,1)/lotus-flower-828457262-5c6334b646e0fb0001dcd75a.jpg'
+image=io.imread(url)
+plt.imshow(image)
+plt.show()
+
+**OUTPUT**
 
 
 
