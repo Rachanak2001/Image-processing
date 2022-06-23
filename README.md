@@ -124,140 +124,140 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940850/174048120-9fc7d698-0466-459c-a2bf-38816501be12.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/174048200-092e4aca-f297-492e-8af8-010b96b689dc.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/174048342-35f42e3d-bccf-4d8b-8b8f-44b19dd6182a.png)<br>
-
-**10.Develop a program to read image using URL.**
-from skimage import io
-import matplotlib.pyplot as plt
-url='https://www.thoughtco.com/thmb/mik7Z00SAYN786BQbieXWOzZmc8=/2121x1414/filters:fill(auto,1)/lotus-flower-828457262-5c6334b646e0fb0001dcd75a.jpg'
-image=io.imread(url)
-plt.imshow(image)
-plt.show()
-
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/175267175-16d4e9e5-a412-49b8-8d6b-9e39b29064b4.png)
-
-
-**11.Write a program to mask and blur the image.**
-import cv2
-import matplotlib.image as mpimg
-import matplotlib.pyplot as plt
-img=cv2.imread('fish2.jpg')
-plt.imshow(img)
-plt.show()
-![image](https://user-images.githubusercontent.com/97940850/175267604-fade1834-70c7-480d-97d4-0aefac998ffd.png)
-
-hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
-light_orange=(1,190,200)
-dark_orange=(18,255,255)
-mask=cv2.inRange(img,light_orange,dark_orange)
-result=cv2.bitwise_and(img,img,mask=mask)
-plt.subplot(1,2,1)
-plt.imshow(mask,cmap="gray")
-plt.subplot(1,2,2)
-plt.imshow(result)
-plt.show()
-![image](https://user-images.githubusercontent.com/97940850/175267763-ce4b43ce-48a4-47ce-9bf3-b1ca3105b8fe.png)
-
-light_white=(0,0,200)
-dark_white=(145,60,225)
-mask_white=cv2.inRange(hsv_img,light_white,dark_white)
-result_white=cv2.bitwise_and(img,img,mask=mask_white)
-plt.subplot(1,2,1)
-plt.imshow(mask_white,cmap="gray")
-plt.subplot(1,2,2)
-plt.imshow(result_white)
-plt.show()
-![image](https://user-images.githubusercontent.com/97940850/175268219-32d7eb9a-3ef4-4a8d-9510-fadc180d07f7.png)
-
-final_mask=mask+mask_white
-final_result=cv2.bitwise_and(img,img,mask=final_mask)
-plt.subplot(1,2,1)
-plt.imshow(final_mask,cmap="gray")
-plt.subplot(1,2,2)
-plt.imshow(final_result)
-plt.show()
-![image](https://user-images.githubusercontent.com/97940850/175268463-d53cb81d-d3ea-457e-b94c-2baa0050dcd3.png)
-
-blur=cv2.GaussianBlur(final_result,(7,7),0)
-plt.imshow(blur)
-plt.show()
-![image](https://user-images.githubusercontent.com/97940850/175268590-97ab250f-c39b-4f74-8ad1-dc4fc6b1b807.png)
-
-**12. Write a program to perform arithmatic operations on image.**
-import cv2
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
-#Reading image files
-img1=cv2.imread('leaf.jpg')
-img2=cv2.imread('leaf2.jpg')
-
-#Applying Numpy addition on image
-fimg1=img1+img2
-plt.imshow(fimg1)
-plt.show()
-
-#Saving the output image
-cv2.imwrite('output.jpg',fimg1)
-fimg2=img1-img2
-plt.imshow(fimg2)
-plt.show()
-
-#Saving the output image
-cv2.imwrite('output.jpg',fimg2)
-fimg3=img1*img2
-plt.imshow(fimg3)
-plt.show()
-
-#Saving the output image
-cv2.imwrite('output.jpg',fimg3)
-fimg4=img1/img2
-plt.imshow(fimg4)
-plt.show()
-
-#Saving the output image
-cv2.imwrite('output.jpg',fimg4)
-
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/175269154-00a58e74-62fb-4659-b0f7-5a01d117798c.png)
-![image](https://user-images.githubusercontent.com/97940850/175269330-bdabc936-a1f2-4c83-9288-d6c3260a98a9.png)
-![image](https://user-images.githubusercontent.com/97940850/175269369-bd58f274-f5a9-4975-bc70-844e92bc5ccc.png)
-![image](https://user-images.githubusercontent.com/97940850/175269446-e0f782e5-a935-43a7-9d22-0df191ddd7f8.png)
-
-**13.Develop the program to change the image to different color spaces.**
-#Develop the program to change the image to different color spaces.
-import cv2 
-img=cv2.imread("flower5.jpg")
-gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
-hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
-yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
-cv2.imshow("GRAY image",gray)
-cv2.imshow("HSV image",hsv)
-cv2.imshow("LAB image",lab)
-cv2.imshow("HLS image",hls)
-cv2.imshow("YUV image",yuv)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/175270342-85783a7b-7426-4963-8c35-cca4c75c8fe9.png)
-![image](https://user-images.githubusercontent.com/97940850/175270746-5ea73ee1-aa46-4d09-9529-cf6ca35b1e35.png)
-![image](https://user-images.githubusercontent.com/97940850/175270930-87dbe99b-4ce4-4300-a996-cfcb3ce2d7f0.png)
-![image](https://user-images.githubusercontent.com/97940850/175271007-9e6cc280-f7c2-494b-9fa4-0f70b0671b04.png)
-![image](https://user-images.githubusercontent.com/97940850/175271082-f7c92ce4-161d-477f-8b4c-78a15af54dd2.png)
-
-**14.Program to create an image using 2D array.**
-import cv2 as c
-import numpy as np
-from PIL import Image
-array=np.zeros([100,200,3],dtype=np.uint8)
-array[:,:100]=[255,130,0]
-array[:,100:]=[0,0,255]
-img=Image.fromarray(array)
-img.save('flower5.jpg')
-img.show()
-c.waitKey(0)
-
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/175271426-a7f9f364-377a-4390-96df-e286e4bed715.png)
+<br>
+**10.Develop a program to read image using URL.**<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+url='https://www.thoughtco.com/thmb/mik7Z00SAYN786BQbieXWOzZmc8=/2121x1414/filters:fill(auto,1)/lotus-flower-828457262-5c6334b646e0fb0001dcd75a.jpg'<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br>
+<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/175267175-16d4e9e5-a412-49b8-8d6b-9e39b29064b4.png)<br>
+<br>
+<br>
+**11.Write a program to mask and blur the image.**<br>
+import cv2<br>
+import matplotlib.image as mpimg<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('fish2.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/97940850/175267604-fade1834-70c7-480d-97d4-0aefac998ffd.png)<br>
+<br>
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+light_orange=(1,190,200)<br>
+dark_orange=(18,255,255)<br>
+mask=cv2.inRange(img,light_orange,dark_orange)<br>
+result=cv2.bitwise_and(img,img,mask=mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/97940850/175267763-ce4b43ce-48a4-47ce-9bf3-b1ca3105b8fe.png)<br>
+<br>
+light_white=(0,0,200)<br>
+dark_white=(145,60,225)<br>
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
+result_white=cv2.bitwise_and(img,img,mask=mask_white)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask_white,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result_white)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/97940850/175268219-32d7eb9a-3ef4-4a8d-9510-fadc180d07f7.png)<br>
+<br>
+final_mask=mask+mask_white<br>
+final_result=cv2.bitwise_and(img,img,mask=final_mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(final_mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(final_result)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/97940850/175268463-d53cb81d-d3ea-457e-b94c-2baa0050dcd3.png)<br>
+<br>
+blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
+plt.imshow(blur)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/97940850/175268590-97ab250f-c39b-4f74-8ad1-dc4fc6b1b807.png)<br>
+<br>
+**12. Write a program to perform arithmatic operations on image.**<br>
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+#Reading image files<br>
+img1=cv2.imread('leaf.jpg')<br>
+img2=cv2.imread('leaf2.jpg')<br>
+<br>
+#Applying Numpy addition on image<br>
+fimg1=img1+img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
+<br>
+#Saving the output image<br>
+cv2.imwrite('output.jpg',fimg1)<br>
+fimg2=img1-img2<br>
+plt.imshow(fimg2)<br>
+plt.show()<br>
+<br>
+#Saving the output image<br>
+cv2.imwrite('output.jpg',fimg2)<br>
+fimg3=img1*img2<br>
+plt.imshow(fimg3)<br>
+plt.show()<br>
+<br>
+#Saving the output image<br>
+cv2.imwrite('output.jpg',fimg3)<br>
+fimg4=img1/img2<br>
+plt.imshow(fimg4)<br><br>
+plt.show()<br>
+<br>
+#Saving the output image<br>
+cv2.imwrite('output.jpg',fimg4)<br>
+<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/175269154-00a58e74-62fb-4659-b0f7-5a01d117798c.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175269330-bdabc936-a1f2-4c83-9288-d6c3260a98a9.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175269369-bd58f274-f5a9-4975-bc70-844e92bc5ccc.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175269446-e0f782e5-a935-43a7-9d22-0df191ddd7f8.png)<br>
+<br>
+**13.Develop the program to change the image to different color spaces.**<br>
+#Develop the program to change the image to different color spaces.<br>
+import cv2 <br>
+img=cv2.imread("flower5.jpg")<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
+cv2.imshow("GRAY image",gray)<br>
+cv2.imshow("HSV image",hsv)<br>
+cv2.imshow("LAB image",lab)<br>
+cv2.imshow("HLS image",hls)<br>
+cv2.imshow("YUV image",yuv)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br><br>
+<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/175270342-85783a7b-7426-4963-8c35-cca4c75c8fe9.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175270746-5ea73ee1-aa46-4d09-9529-cf6ca35b1e35.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175270930-87dbe99b-4ce4-4300-a996-cfcb3ce2d7f0.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175271007-9e6cc280-f7c2-494b-9fa4-0f70b0671b04.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175271082-f7c92ce4-161d-477f-8b4c-78a15af54dd2.png)<br>
+<br>
+**14.Program to create an image using 2D array.**<br>
+import cv2 as c<br>
+import numpy as np<br>
+from PIL import Image<br>
+array=np.zeros([100,200,3],dtype=np.uint8)<br>
+array[:,:100]=[255,130,0]<br>
+array[:,100:]=[0,0,255]<br>
+img=Image.fromarray(array)<br>
+img.save('flower5.jpg')<br>
+img.show()<br>
+c.waitKey(0)<br>
+<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/175271426-a7f9f364-377a-4390-96df-e286e4bed715.png)<br>
