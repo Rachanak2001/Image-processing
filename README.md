@@ -242,11 +242,12 @@ cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br><br>
 <br>
 **OUTPUT**<br>
-![image](https://user-images.githubusercontent.com/97940850/175270342-85783a7b-7426-4963-8c35-cca4c75c8fe9.png)<br>
-![image](https://user-images.githubusercontent.com/97940850/175270746-5ea73ee1-aa46-4d09-9529-cf6ca35b1e35.png)<br>
-![image](https://user-images.githubusercontent.com/97940850/175270930-87dbe99b-4ce4-4300-a996-cfcb3ce2d7f0.png)<br>
-![image](https://user-images.githubusercontent.com/97940850/175271007-9e6cc280-f7c2-494b-9fa4-0f70b0671b04.png)<br>
-![image](https://user-images.githubusercontent.com/97940850/175271082-f7c92ce4-161d-477f-8b4c-78a15af54dd2.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/175287410-60d53f53-0581-4ac6-a9a4-eab46aa7dff9.png)
+![image](https://user-images.githubusercontent.com/97940850/175287466-cef916c4-4116-48f1-b256-902942fead78.png)
+![image](https://user-images.githubusercontent.com/97940850/175287520-5dd9e8fe-db58-468d-ab86-ca919f4661c7.png)
+![image](https://user-images.githubusercontent.com/97940850/175287565-4e4287da-a5c9-4ea3-a5f9-b5373677319b.png)
+![image](https://user-images.githubusercontent.com/97940850/175287632-a1a7edf4-6c84-4550-aef8-030de594bbe0.png)
+
 <br>
 **14.Program to create an image using 2D array.**<br>
 import cv2 as c<br>
