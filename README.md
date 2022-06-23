@@ -183,5 +183,40 @@ plt.imshow(blur)
 plt.show()
 ![image](https://user-images.githubusercontent.com/97940850/175268590-97ab250f-c39b-4f74-8ad1-dc4fc6b1b807.png)
 
+**12. Write a program to perform arithmatic operations on image.**
+import cv2
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+#Reading image files
+img1=cv2.imread('leaf.jpg')
+img2=cv2.imread('leaf2.jpg')
 
+#Applying Numpy addition on image
+fimg1=img1+img2
+plt.imshow(fimg1)
+plt.show()
+
+#Saving the output image
+cv2.imwrite('output.jpg',fimg1)
+fimg2=img1-img2
+plt.imshow(fimg2)
+plt.show()
+
+#Saving the output image
+cv2.imwrite('output.jpg',fimg2)
+fimg3=img1*img2
+plt.imshow(fimg3)
+plt.show()
+
+#Saving the output image
+cv2.imwrite('output.jpg',fimg3)
+fimg4=img1/img2
+plt.imshow(fimg4)
+plt.show()
+
+#Saving the output image
+cv2.imwrite('output.jpg',fimg4)
+
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/175269154-00a58e74-62fb-4659-b0f7-5a01d117798c.png)
 
