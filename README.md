@@ -223,6 +223,25 @@ cv2.imwrite('output.jpg',fimg4)
 ![image](https://user-images.githubusercontent.com/97940850/175269369-bd58f274-f5a9-4975-bc70-844e92bc5ccc.png)
 ![image](https://user-images.githubusercontent.com/97940850/175269446-e0f782e5-a935-43a7-9d22-0df191ddd7f8.png)
 
+**13.Develop the program to change the image to different color spaces.**
+#Develop the program to change the image to different color spaces.
+import cv2 
+img=cv2.imread("flower5.jpg")
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
+cv2.imshow("GRAY image",gray)
+cv2.imshow("HSV image",hsv)
+cv2.imshow("LAB image",lab)
+cv2.imshow("HLS image",hls)
+cv2.imshow("YUV image",yuv)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/175270342-85783a7b-7426-4963-8c35-cca4c75c8fe9.png)
 
 
 
