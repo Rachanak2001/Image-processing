@@ -138,4 +138,24 @@ plt.show()
 
 
 **11.Write a program to mask and blur the image.**
+import cv2
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+img=cv2.imread('fish2.jpg')
+plt.imshow(img)
+plt.show()
+![image](https://user-images.githubusercontent.com/97940850/175267604-fade1834-70c7-480d-97d4-0aefac998ffd.png)
+
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+light_orange=(1,190,200)
+dark_orange=(18,255,255)
+mask=cv2.inRange(img,light_orange,dark_orange)
+result=cv2.bitwise_and(img,img,mask=mask)
+plt.subplot(1,2,1)
+plt.imshow(mask,cmap="gray")
+plt.subplot(1,2,2)
+plt.imshow(result)
+plt.show()
+![image](https://user-images.githubusercontent.com/97940850/175267763-ce4b43ce-48a4-47ce-9bf3-b1ca3105b8fe.png)
+
 
