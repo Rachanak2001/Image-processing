@@ -321,6 +321,35 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/97940850/176425666-e01cc8a7-2845-4212-960c-48315a808511.png)
 ![image](https://user-images.githubusercontent.com/97940850/176425807-be83485c-bb8b-4152-b0ba-60a54917dec4.png)
 
+**17.Enhancement operation**
+from PIL import Image
+from PIL import ImageEnhance
+image=Image.open('pic4.jpg')
+image.show()
+enh_bri=ImageEnhance.Brightness(image)
+brightness=1.5
+image_brightened=enh_bri.enhance(brightness)
+image_brightened.show()
+enh_col=ImageEnhance.Color(image)
+color=1.5
+image_colored=enh_col.enhance(color)
+image_colored.show()
+enh_con=ImageEnhance.Contrast(image)
+contrast=1.5
+image_contrasted=enh_con.enhance(contrast)
+image_contrasted.show()
+enh_sha=ImageEnhance.Sharpness(image)
+sharpness=3.0
+image_sharped=enh_sha.enhance(sharpness)
+image_sharped.show()
+
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/176427226-823e0586-e063-4e76-9475-a01d0fc5e842.png)
+![image](https://user-images.githubusercontent.com/97940850/176427147-7c605350-0441-4389-9e53-8494d7ba8492.png)
+![image](https://user-images.githubusercontent.com/97940850/176427054-961bb1c7-53ce-466c-883c-ff0eb7a1f82d.png)
+![image](https://user-images.githubusercontent.com/97940850/176426973-b3bf760c-b0ea-4afb-9f72-08f9120cb914.png)
+![image](https://user-images.githubusercontent.com/97940850/176426892-88a81538-8ee0-47c0-914b-dba853e1c152.png)
+
 
 **18. Morphological Operation**
 import cv2
