@@ -317,6 +317,9 @@ cv2.destroyAllWindows()
 
 **OUTPUT**
 ![image](https://user-images.githubusercontent.com/97940850/176425173-a32711f8-528a-415b-b2c7-2aecafcfe51c.png)
+![image](https://user-images.githubusercontent.com/97940850/176425510-150f3ed1-a2db-4aa4-9c98-9661936e275f.png)
+![image](https://user-images.githubusercontent.com/97940850/176425666-e01cc8a7-2845-4212-960c-48315a808511.png)
+![image](https://user-images.githubusercontent.com/97940850/176425807-be83485c-bb8b-4152-b0ba-60a54917dec4.png)
 
 
 **18. Morphological Operation**
