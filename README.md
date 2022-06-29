@@ -288,3 +288,59 @@ cv2.waitKey(0)
 
 **OUTPUT**
 ![image](https://user-images.githubusercontent.com/97940850/176423043-c43a0c49-5f42-4eb6-bd60-1542e0c1ff6a.png)
+
+**16.Blurring an Image**
+#importing libraries
+import cv2
+import numpy as np
+
+image=cv2.imread('pic6.jpg')
+
+cv2.imshow('Original Image',image)
+cv2.waitKey(0)
+
+#Gaussian blur
+Gaussian=cv2.GaussianBlur(image,(7,7),0)
+cv2.imshow('Gaussian Blurring',Gaussian)
+cv2.waitKey(0)
+
+#Medium Blur
+median=cv2.medianBlur(image,5)
+cv2.imshow('Median Blurring',median)
+cv2.waitKey(0)
+
+#Bilateral Blur
+bilateral=cv2.bilateralFilter(image,9,75,75)
+cv2.imshow('Bilateral Blurring',bilateral)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+**OUTPUT**
+
+**18. Morphological Operation**
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+from PIL import Image,ImageEnhance
+img=cv2.imread('pic1.jpg',0)
+ax=plt.subplots(figsize=(20,10))
+kernel=np.ones((9,9),np.uint8)
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
+erosion=cv2.erode(img,kernel,iterations=1)
+dilation=cv2.dilate(img,kernel,iterations=1)
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
+plt.subplot(151)
+plt.imshow(opening)
+plt.subplot(152)
+plt.imshow(closing)
+plt.subplot(153)
+plt.imshow(erosion)
+plt.subplot(154)
+plt.imshow(dilation)
+plt.subplot(155)
+plt.imshow(gradient)
+cv2.waitKey(0)
+
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/176424620-edb73f30-1828-4b0c-95a6-3ca15b3461a2.png)
