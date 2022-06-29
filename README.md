@@ -316,6 +316,8 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 **OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/176425173-a32711f8-528a-415b-b2c7-2aecafcfe51c.png)
+
 
 **18. Morphological Operation**
 import cv2
