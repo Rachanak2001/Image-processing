@@ -262,119 +262,120 @@ c.waitKey(0)<br>
 <br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940850/175271426-a7f9f364-377a-4390-96df-e286e4bed715.png)<br>
+<br>
+**15. Bitwise Operation**<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+image1=cv2.imread('pic1.jpg',1)<br>
+image2=cv2.imread('pic1.jpg')<br>
+ax=plt.subplots(figsize=(15,10))<br>
+bitwiseAnd=cv2.bitwise_and(image1,image2)<br>
+bitwiseOr=cv2.bitwise_or(image1,image2)<br>
+bitwiseXor=cv2.bitwise_xor(image1,image2)<br>
+bitwiseNot_img1=cv2.bitwise_not(image1)<br>
+bitwiseNot_img2=cv2.bitwise_not(image2)<br>
+plt.subplot(151)<br>
+plt.imshow(bitwiseAnd)<br>
+plt.subplot(152)<br>
+plt.imshow(bitwiseOr)<br>
+plt.subplot(153)<br>
+plt.imshow(bitwiseXor)<br>
+plt.subplot(154)<br>
+plt.imshow(bitwiseNot_img1)<br>
+plt.subplot(155)<br>
+plt.imshow(bitwiseNot_img2)<br>
+cv2.waitKey(0)<br>
+<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/176423043-c43a0c49-5f42-4eb6-bd60-1542e0c1ff6a.png)<br>
+<br>
+**16.Blurring an Image**<br>
+#importing libraries<br>
+import cv2<br>
+import numpy as np<br>
+<br>
+image=cv2.imread('pic6.jpg')<br>
+<br>
+cv2.imshow('Original Image',image)<br>
+cv2.waitKey(0)<br>
+<br>
+#Gaussian blur<br>
+Gaussian=cv2.GaussianBlur(image,(7,7),0)<br>
+cv2.imshow('Gaussian Blurring',Gaussian)<br>
+cv2.waitKey(0)<br>
+<br>
+#Medium Blur<br>
+median=cv2.medianBlur(image,5)<br>
+cv2.imshow('Median Blurring',median)<br>
+cv2.waitKey(0)<br>
+<br>
+#Bilateral Blur<br>
+bilateral=cv2.bilateralFilter(image,9,75,75)<br>
+cv2.imshow('Bilateral Blurring',bilateral)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/176425173-a32711f8-528a-415b-b2c7-2aecafcfe51c.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/176425510-150f3ed1-a2db-4aa4-9c98-9661936e275f.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/176425666-e01cc8a7-2845-4212-960c-48315a808511.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/176425807-be83485c-bb8b-4152-b0ba-60a54917dec4.png)<br>
+<br>
+**17.Enhancement operation**<br>
+from PIL import Image<br>
+from PIL import ImageEnhance<br>
+image=Image.open('pic4.jpg')<br>
+image.show()<br>
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5<br>
+image_brightened=enh_bri.enhance(brightness)<br>
+image_brightened.show()<br>
+enh_col=ImageEnhance.Color(image)<br>
+color=1.5<br>
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
+image_contrasted=enh_con.enhance(contrast)<br>
+image_contrasted.show()<br>
+enh_sha=ImageEnhance.Sharpness(image)<br>
+sharpness=3.0<br>
+image_sharped=enh_sha.enhance(sharpness)<br>
+image_sharped.show()<br>
+<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/176427226-823e0586-e063-4e76-9475-a01d0fc5e842.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/176427147-7c605350-0441-4389-9e53-8494d7ba8492.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/176427054-961bb1c7-53ce-466c-883c-ff0eb7a1f82d.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/176426973-b3bf760c-b0ea-4afb-9f72-08f9120cb914.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/176426892-88a81538-8ee0-47c0-914b-dba853e1c152.png)<br>
+<br>
 
-**15. Bitwise Operation**
-import cv2
-import matplotlib.pyplot as plt
-image1=cv2.imread('pic1.jpg',1)
-image2=cv2.imread('pic1.jpg')
-ax=plt.subplots(figsize=(15,10))
-bitwiseAnd=cv2.bitwise_and(image1,image2)
-bitwiseOr=cv2.bitwise_or(image1,image2)
-bitwiseXor=cv2.bitwise_xor(image1,image2)
-bitwiseNot_img1=cv2.bitwise_not(image1)
-bitwiseNot_img2=cv2.bitwise_not(image2)
-plt.subplot(151)
-plt.imshow(bitwiseAnd)
-plt.subplot(152)
-plt.imshow(bitwiseOr)
-plt.subplot(153)
-plt.imshow(bitwiseXor)
-plt.subplot(154)
-plt.imshow(bitwiseNot_img1)
-plt.subplot(155)
-plt.imshow(bitwiseNot_img2)
-cv2.waitKey(0)
-
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/176423043-c43a0c49-5f42-4eb6-bd60-1542e0c1ff6a.png)
-
-**16.Blurring an Image**
-#importing libraries
-import cv2
-import numpy as np
-
-image=cv2.imread('pic6.jpg')
-
-cv2.imshow('Original Image',image)
-cv2.waitKey(0)
-
-#Gaussian blur
-Gaussian=cv2.GaussianBlur(image,(7,7),0)
-cv2.imshow('Gaussian Blurring',Gaussian)
-cv2.waitKey(0)
-
-#Medium Blur
-median=cv2.medianBlur(image,5)
-cv2.imshow('Median Blurring',median)
-cv2.waitKey(0)
-
-#Bilateral Blur
-bilateral=cv2.bilateralFilter(image,9,75,75)
-cv2.imshow('Bilateral Blurring',bilateral)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/176425173-a32711f8-528a-415b-b2c7-2aecafcfe51c.png)
-![image](https://user-images.githubusercontent.com/97940850/176425510-150f3ed1-a2db-4aa4-9c98-9661936e275f.png)
-![image](https://user-images.githubusercontent.com/97940850/176425666-e01cc8a7-2845-4212-960c-48315a808511.png)
-![image](https://user-images.githubusercontent.com/97940850/176425807-be83485c-bb8b-4152-b0ba-60a54917dec4.png)
-
-**17.Enhancement operation**
-from PIL import Image
-from PIL import ImageEnhance
-image=Image.open('pic4.jpg')
-image.show()
-enh_bri=ImageEnhance.Brightness(image)
-brightness=1.5
-image_brightened=enh_bri.enhance(brightness)
-image_brightened.show()
-enh_col=ImageEnhance.Color(image)
-color=1.5
-image_colored=enh_col.enhance(color)
-image_colored.show()
-enh_con=ImageEnhance.Contrast(image)
-contrast=1.5
-image_contrasted=enh_con.enhance(contrast)
-image_contrasted.show()
-enh_sha=ImageEnhance.Sharpness(image)
-sharpness=3.0
-image_sharped=enh_sha.enhance(sharpness)
-image_sharped.show()
-
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/176427226-823e0586-e063-4e76-9475-a01d0fc5e842.png)
-![image](https://user-images.githubusercontent.com/97940850/176427147-7c605350-0441-4389-9e53-8494d7ba8492.png)
-![image](https://user-images.githubusercontent.com/97940850/176427054-961bb1c7-53ce-466c-883c-ff0eb7a1f82d.png)
-![image](https://user-images.githubusercontent.com/97940850/176426973-b3bf760c-b0ea-4afb-9f72-08f9120cb914.png)
-![image](https://user-images.githubusercontent.com/97940850/176426892-88a81538-8ee0-47c0-914b-dba853e1c152.png)
-
-
-**18. Morphological Operation**
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-from PIL import Image,ImageEnhance
-img=cv2.imread('pic1.jpg',0)
-ax=plt.subplots(figsize=(20,10))
-kernel=np.ones((9,9),np.uint8)
-opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
-closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
-erosion=cv2.erode(img,kernel,iterations=1)
-dilation=cv2.dilate(img,kernel,iterations=1)
-gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
-plt.subplot(151)
-plt.imshow(opening)
-plt.subplot(152)
-plt.imshow(closing)
-plt.subplot(153)
-plt.imshow(erosion)
-plt.subplot(154)
-plt.imshow(dilation)
-plt.subplot(155)
-plt.imshow(gradient)
-cv2.waitKey(0)
-
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/176424620-edb73f30-1828-4b0c-95a6-3ca15b3461a2.png)
+**18. Morphological Operation**<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+from PIL import Image,ImageEnhance<br>
+img=cv2.imread('pic1.jpg',0)<br>
+ax=plt.subplots(figsize=(20,10))<br>
+kernel=np.ones((9,9),np.uint8)<br>
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)<br>
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)<br>
+erosion=cv2.erode(img,kernel,iterations=1)<br>
+dilation=cv2.dilate(img,kernel,iterations=1)<br>
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)<br>
+plt.subplot(151)<br>
+plt.imshow(opening)<br>
+plt.subplot(152)<br>
+plt.imshow(closing)<br>
+plt.subplot(153)<br>
+plt.imshow(erosion)<br>
+plt.subplot(154)<br>
+plt.imshow(dilation)<br>
+plt.subplot(155)<br>
+plt.imshow(gradient)<br>
+cv2.waitKey(0)<br>
+<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/176424620-edb73f30-1828-4b0c-95a6-3ca15b3461a2.png)<br>
+<br>
