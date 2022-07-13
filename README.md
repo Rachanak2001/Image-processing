@@ -379,3 +379,22 @@ cv2.waitKey(0)<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940850/176424620-edb73f30-1828-4b0c-95a6-3ca15b3461a2.png)<br>
 <br>
+
+**19. Develop a program to **
+**(i)Read the image ,convert it into grayscale image.**
+**(ii)Write(save) the grayscale image and**
+**(iii) Display the original image and grayscale image.**
+import cv2
+OriginalImg=cv2.imread('pic4.jpg')
+GrayImg=cv2.imread('pic4.jpg',0)
+isPic=cv2.imwrite('C:\Rachana.K\Data sets\j.jpg',GrayImg)
+cv2.imshow('Display original Image',OriginalImg)
+cv2.imshow('Dispaly Grayscale Image',GrayImg)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+if isPic:
+    print('The image is successfully saved.')
+**OUTPUT**
+The image is successfully saved.
+![image](https://user-images.githubusercontent.com/97940850/178710709-c82a4480-215e-4b62-9f40-cbcbbc67356d.png)
+![image](https://user-images.githubusercontent.com/97940850/178710844-64a98878-174a-4d14-a3f1-337a9392c6be.png)
