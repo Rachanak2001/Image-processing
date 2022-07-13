@@ -400,3 +400,23 @@ The image is successfully saved.
 ![image](https://user-images.githubusercontent.com/97940850/178710709-c82a4480-215e-4b62-9f40-cbcbbc67356d.png)
 ![image](https://user-images.githubusercontent.com/97940850/178710844-64a98878-174a-4d14-a3f1-337a9392c6be.png)
 ![image](https://user-images.githubusercontent.com/97940850/178711665-785fa9cf-cf39-43c2-90a2-b23fdfc521fd.png)
+
+**20. Slicing with background.**
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('pic6.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+                z[i][j]=image[i][j]
+equ=np.hstack((image,z))
+plt.title('Graylevel slicing with background')
+plt.imshow(equ,'gray')
+plt.show()
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/178711954-90663058-0958-4352-a890-e38ec973f628.png)
