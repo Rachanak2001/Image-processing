@@ -397,7 +397,7 @@ if isPic:<br>
     <br>
 **OUTPUT**<br>
 The image is successfully saved.<br>
-![image](https://user-images.githubusercontent.com/97940850/178710709-c82a4480-215e-4b62-9f40-cbcbbc67356d.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/178710709-c82a4480-215e-4b62-9f40-cbcbbc67356d.png)
 ![image](https://user-images.githubusercontent.com/97940850/178710844-64a98878-174a-4d14-a3f1-337a9392c6be.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/178711665-785fa9cf-cf39-43c2-90a2-b23fdfc521fd.png)<br>
 <br>
