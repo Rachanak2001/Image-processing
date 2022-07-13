@@ -394,7 +394,9 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 if isPic:
     print('The image is successfully saved.')
+    
 **OUTPUT**
 The image is successfully saved.
 ![image](https://user-images.githubusercontent.com/97940850/178710709-c82a4480-215e-4b62-9f40-cbcbbc67356d.png)
 ![image](https://user-images.githubusercontent.com/97940850/178710844-64a98878-174a-4d14-a3f1-337a9392c6be.png)
+![image](https://user-images.githubusercontent.com/97940850/178711665-785fa9cf-cf39-43c2-90a2-b23fdfc521fd.png)
