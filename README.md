@@ -87,19 +87,23 @@ Height:  720<br>
 <br>
 <br>
 **8. Resize the original image.**<br>
-import cv2<br>
-img=cv2.imread('flower5.jpg')<br>
-print('origial image length width',img.shape)<br>
-cv2.imshow('original image',img)<br>
-cv2.waitKey(0)<br>
-#to show the resized image<br>
-imgresize=cv2.resize(img,(150,160))<br>
-cv2.imshow('Resized image',imgresize)<br>
-print('Resized image length, width',imgresize.shape)<br>
-cv2.waitKey(0)<br>
+import cv2
+img=cv2.imread('pic12.jpg')
+print('origial image length width',img.shape)
+cv2.imshow('original image',img)
+cv2.waitKey(0)
+#to show the resized image
+imgresize=cv2.resize(img,(150,160))
+cv2.imshow('Resized image',imgresize)
+print('Resized image lenght width',imgresize.shape)
+cv2.waitKey(0)
 **OUTPUT**<br>
-origial image length width (640, 960, 3)<br>
+origial image length width (144, 349, 3)<br><br>
+![image](https://user-images.githubusercontent.com/97940850/178955458-6b21c6c8-b052-416f-a368-6d540cca637c.png)<br>
 Resized image lenght width (160, 150, 3)<br>
+![image](https://user-images.githubusercontent.com/97940850/178955639-b2201f6f-a3fb-4175-a8ce-dbfe9394000c.png)<br>
+<br>
+
 <br>
 **9. Convert the original image to gray scale and then to binary.**<br>
 import cv2<br>
