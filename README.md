@@ -225,7 +225,6 @@ cv2.imwrite('output.jpg',fimg4)<br>
 ![image](https://user-images.githubusercontent.com/97940850/175286432-76d45d3a-774a-4d96-b359-e5fee841a548.png)
 ![image](https://user-images.githubusercontent.com/97940850/175286459-cec413b9-fedb-4f16-a583-b8626be69de0.png)
 ![image](https://user-images.githubusercontent.com/97940850/175286479-424eda13-e076-4aef-ab87-08f821a654a3.png)
-
 <br>
 **13.Develop the program to change the image to different color spaces.**<br>
 import cv2 <br>
@@ -249,7 +248,6 @@ cv2.destroyAllWindows()<br><br>
 ![image](https://user-images.githubusercontent.com/97940850/175287520-5dd9e8fe-db58-468d-ab86-ca919f4661c7.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/175287565-4e4287da-a5c9-4ea3-a5f9-b5373677319b.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/175287632-a1a7edf4-6c84-4550-aef8-030de594bbe0.png)<br>
-
 <br>
 **14.Program to create an image using 2D array.**<br>
 import cv2 as c<br>
@@ -353,7 +351,6 @@ image_sharped.show()<br>
 ![image](https://user-images.githubusercontent.com/97940850/176426973-b3bf760c-b0ea-4afb-9f72-08f9120cb914.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/176426892-88a81538-8ee0-47c0-914b-dba853e1c152.png)<br>
 <br>
-
 **18. Morphological Operation**<br>
 import cv2<br>
 import numpy as np<br>
