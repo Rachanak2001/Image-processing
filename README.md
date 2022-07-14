@@ -103,7 +103,6 @@ origial image length width (144, 349, 3)<br><br>
 Resized image lenght width (160, 150, 3)<br>
 ![image](https://user-images.githubusercontent.com/97940850/178955639-b2201f6f-a3fb-4175-a8ce-dbfe9394000c.png)<br>
 <br>
-
 <br>
 **9. Convert the original image to gray scale and then to binary.**<br>
 import cv2<br>
