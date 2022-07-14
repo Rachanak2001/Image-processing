@@ -470,3 +470,5 @@ plt.plot(bin_edges[0:-1], histogram) # <- or here
 plt.show()
 **OUTPUT**
 ![image](https://user-images.githubusercontent.com/97940850/178963160-2950bddb-8940-4181-bb9d-6f898dd8a094.png)
+![image](https://user-images.githubusercontent.com/97940850/178963230-98b6ef59-88bf-48c3-833c-5ff6d2f7c62f.png)
+![image](https://user-images.githubusercontent.com/97940850/178963662-5decba20-37e9-4920-9720-3ebb4e1a58d2.png)
