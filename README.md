@@ -442,33 +442,34 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940850/178712151-f3d0c64d-052c-42d7-9160-59d776446a56.png)<br>
 <br>
-**22. Analyse the image data using histogram.**
-#Histogram
-import numpy as np
-import skimage.color
-import skimage.io
-import matplotlib.pyplot as plt
-#read the image of a plant seedling as grayscale from the outset
-image1 = skimage.io.imread(fname="pic13.jpg")
-image = skimage.io.imread(fname="pic13.jpg", as_gray=True)
-#display the image
-fig, ax = plt.subplots()
-plt.imshow(image1, cmap="gray")
-plt.show()
-fig, ax = plt.subplots()
-plt.imshow(image, cmap="gray")
-plt.show()
-#create the histogram
-histogram, bin_edges = np.histogram(image, bins=256, range=(0, 1))
-#configure and draw the histogram figure
-plt.figure()
-plt.title("Grayscale Histogram")
-plt.xlabel("grayscale value")
-plt.ylabel("pixel count")
-plt.xlim([0.0, 1.0]) # <- named arguments do not work here
-plt.plot(bin_edges[0:-1], histogram) # <- or here
-plt.show()
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/178963160-2950bddb-8940-4181-bb9d-6f898dd8a094.png)
-![image](https://user-images.githubusercontent.com/97940850/178963230-98b6ef59-88bf-48c3-833c-5ff6d2f7c62f.png)
-![image](https://user-images.githubusercontent.com/97940850/178963662-5decba20-37e9-4920-9720-3ebb4e1a58d2.png)
+**22. Analyse the image data using histogram.**<br>
+#Histogram<br>
+import numpy as np<br>
+import skimage.color<br>
+import skimage.io<br>
+import matplotlib.pyplot as plt<br>
+#read the image of a plant seedling as grayscale from the outset<br>
+image1 = skimage.io.imread(fname="pic13.jpg")<br>
+image = skimage.io.imread(fname="pic13.jpg", as_gray=True)<br>
+#display the image<br>
+fig, ax = plt.subplots()<br>
+plt.imshow(image1, cmap="gray")<br>
+plt.show()<br>
+fig, ax = plt.subplots()<br>
+plt.imshow(image, cmap="gray")<br>
+plt.show()<br>
+#create the histogram<br>
+histogram, bin_edges = np.histogram(image, bins=256, range=(0, 1))<br>
+#configure and draw the histogram figure<br>
+plt.figure()<br>
+plt.title("Grayscale Histogram")<br>
+plt.xlabel("grayscale value")<br>
+plt.ylabel("pixel count")<br>
+plt.xlim([0.0, 1.0])<br>
+plt.plot(bin_edges[0:-1], histogram) <br>
+plt.show()<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/178963160-2950bddb-8940-4181-bb9d-6f898dd8a094.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/178963230-98b6ef59-88bf-48c3-833c-5ff6d2f7c62f.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/178963662-5decba20-37e9-4920-9720-3ebb4e1a58d2.png)<br>
+<br>
