@@ -473,3 +473,60 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940850/178963230-98b6ef59-88bf-48c3-833c-5ff6d2f7c62f.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/178963662-5decba20-37e9-4920-9720-3ebb4e1a58d2.png)<br>
 <br>
+**23. Program to perform basic image data analysis using intensity transformation:**
+**a) Image nagative b)Log Transformation  c)Gamma correction d)**
+%matplotlib inline
+import imageio
+import matplotlib.pyplot as plt
+import warnings
+import matplotlib.cbook
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+pic=imageio.imread('pic14.jpg')
+plt.figure(figsize=(6,6))
+plt.imshow(pic);
+plt.axis('off');
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/179950339-e9c6e78f-b2ab-4fb2-b4fc-44e42303fa9a.png)
+**a)Image negative**
+negative=255-pic #neg=(L-1)-img
+plt.figure(figsize=(6,6))
+plt.imshow(negative);
+plt.axis('off');
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/179950618-76033b92-8447-4ff7-99fc-047597eaeb7e.png)
+**b)Log Transformation**
+%matplotlib inline
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+
+pic=imageio.imread('pic14.jpg')
+gray=lambda rgd:np.dot(rgd[...,:3],[0.299,0.587,0.114])
+gray=gray(pic)
+
+max_=np.max(gray)
+
+def log_transform():
+    return(255/np.log(1+max_))*np.log(1+gray)
+plt.figure(figsize=(5,5))
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
+plt.axis('off');
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/179950812-1779413c-afc4-4030-892a-fd2adec6d00b.png)
+**c) Gamma correction**
+import imageio
+import matplotlib.pyplot as plt
+
+#Gamma encoding
+pic=imageio.imread('pic14.jpg')
+gamma=2.2 # Gamma < 1 ~ Dark ; Gamma > 1 ~ Bright
+
+gamma_correction=((pic/255)**(1/gamma))
+plt.figure(figsize=(5,5))
+plt.imshow(gamma_correction)
+plt.axis('off');
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/179950978-84f49d7e-2f3f-444b-8a49-eb76297952e0.png)
+
+
+
