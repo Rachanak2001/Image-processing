@@ -527,6 +527,62 @@ plt.imshow(gamma_correction)
 plt.axis('off');
 **OUTPUT**
 ![image](https://user-images.githubusercontent.com/97940850/179950978-84f49d7e-2f3f-444b-8a49-eb76297952e0.png)
+**24.Program to perform basic image manipulation:a)Sharpness b)Flipping c)Cropping**
+#Image sharpen
+from PIL import Image
+from PIL import ImageFilter
+import matplotlib.pyplot as plt
+#Load the image
+my_image=Image.open('pic15.jpg')
+#use sharpen function
+sharp=my_image.filter(ImageFilter.SHARPEN)
+#Save the image
+sharp.save('C:\Rachana.K\image_sharpen.jpg')
+sharp.show()
+plt.imshow(sharp)
+plt.show()
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/179960022-51bafc82-4eba-4749-969c-e65940b97f36.png)
+#Image flip
+import matplotlib.pyplot as plt
+#Load the image
+img=Image.open('pic15.jpg')
+plt.imshow(img)
+plt.show()
+#use the flip function
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)
+
+#save the image
+flip.save('C:\Rachana.K\image_flip.jpg')
+plt.imshow(flip)
+plt.show()
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/179960937-8ad765b7-8089-46ef-a594-844efdc72177.png)
+![image](https://user-images.githubusercontent.com/97940850/179960975-880b75ff-9ade-48b8-82d8-157381042a04.png)
+#Importing Image class from PIL module
+from PIL import Image
+import matplotlib.pyplot as plt
+#Opens a image in RGB mode
+im=Image.open('pic15.jpg')
+
+#Size of the image in pixels(size of original image)
+#(This is not mandotory)
+width,height=im.size
+
+#Cropped image of above dimension
+#(It will not change original image)
+im1=im.crop((120,10,250,160))
+
+#shows the image in image viewer
+im1.show()
+plt.imshow(im1)
+plt.show()
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/179961181-5c41e111-b724-4403-b17a-bf418dea6714.png)
+
+
+
+
 
 
 
