@@ -473,113 +473,114 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940850/178963230-98b6ef59-88bf-48c3-833c-5ff6d2f7c62f.png)<br>
 ![image](https://user-images.githubusercontent.com/97940850/178963662-5decba20-37e9-4920-9720-3ebb4e1a58d2.png)<br>
 <br>
-**23. Program to perform basic image data analysis using intensity transformation:**
-**a) Image nagative b)Log Transformation  c)Gamma correction d)**
-%matplotlib inline
-import imageio
-import matplotlib.pyplot as plt
-import warnings
-import matplotlib.cbook
-warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
-pic=imageio.imread('pic14.jpg')
-plt.figure(figsize=(6,6))
-plt.imshow(pic);
-plt.axis('off');
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/179950339-e9c6e78f-b2ab-4fb2-b4fc-44e42303fa9a.png)
-**a)Image negative**
-negative=255-pic #neg=(L-1)-img
-plt.figure(figsize=(6,6))
-plt.imshow(negative);
-plt.axis('off');
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/179950618-76033b92-8447-4ff7-99fc-047597eaeb7e.png)
-**b)Log Transformation**
-%matplotlib inline
-import imageio
-import numpy as np
-import matplotlib.pyplot as plt
+**23. Program to perform basic image data analysis using intensity transformation:**<br><br>
+**a) Image nagative b)Log Transformation  c)Gamma correction d)**<br>
+%matplotlib inline<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+import warnings<br>
+import matplotlib.cbook<br>
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
+pic=imageio.imread('pic14.jpg')<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(pic);<br>
+plt.axis('off');<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/179950339-e9c6e78f-b2ab-4fb2-b4fc-44e42303fa9a.png)<br>
+**a)Image negative**<br>
+negative=255-pic #neg=(L-1)-img<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(negative);<br>
+plt.axis('off');<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/179950618-76033b92-8447-4ff7-99fc-047597eaeb7e.png)<br>
+**b)Log Transformation**<br>
+%matplotlib inline<br>
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
 
-pic=imageio.imread('pic14.jpg')
-gray=lambda rgd:np.dot(rgd[...,:3],[0.299,0.587,0.114])
-gray=gray(pic)
+pic=imageio.imread('pic14.jpg')<br>
+gray=lambda rgd:np.dot(rgd[...,:3],[0.299,0.587,0.114])<br>
+gray=gray(pic)<br>
 
-max_=np.max(gray)
+max_=np.max(gray)<br>
 
-def log_transform():
-    return(255/np.log(1+max_))*np.log(1+gray)
-plt.figure(figsize=(5,5))
-plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
-plt.axis('off');
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/179950812-1779413c-afc4-4030-892a-fd2adec6d00b.png)
-**c) Gamma correction**
-import imageio
-import matplotlib.pyplot as plt
+def log_transform():<br>
+    return(255/np.log(1+max_))*np.log(1+gray)<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
+plt.axis('off');<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/179950812-1779413c-afc4-4030-892a-fd2adec6d00b.png)<br>
+**c) Gamma correction**<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
 
-#Gamma encoding
-pic=imageio.imread('pic14.jpg')
-gamma=2.2 # Gamma < 1 ~ Dark ; Gamma > 1 ~ Bright
+#Gamma encoding<br>
+pic=imageio.imread('pic14.jpg')<br>
+gamma=2.2 # Gamma < 1 ~ Dark ; Gamma > 1 ~ Bright<br>
 
-gamma_correction=((pic/255)**(1/gamma))
-plt.figure(figsize=(5,5))
-plt.imshow(gamma_correction)
-plt.axis('off');
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/179950978-84f49d7e-2f3f-444b-8a49-eb76297952e0.png)
-**24.Program to perform basic image manipulation:a)Sharpness b)Flipping c)Cropping**
-#Image sharpen
-from PIL import Image
-from PIL import ImageFilter
-import matplotlib.pyplot as plt
-#Load the image
-my_image=Image.open('pic15.jpg')
-#use sharpen function
-sharp=my_image.filter(ImageFilter.SHARPEN)
-#Save the image
-sharp.save('C:\Rachana.K\image_sharpen.jpg')
-sharp.show()
-plt.imshow(sharp)
-plt.show()
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/179960022-51bafc82-4eba-4749-969c-e65940b97f36.png)
-#Image flip
-import matplotlib.pyplot as plt
-#Load the image
-img=Image.open('pic15.jpg')
-plt.imshow(img)
-plt.show()
-#use the flip function
-flip=img.transpose(Image.FLIP_LEFT_RIGHT)
-
-#save the image
-flip.save('C:\Rachana.K\image_flip.jpg')
-plt.imshow(flip)
-plt.show()
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/179960937-8ad765b7-8089-46ef-a594-844efdc72177.png)
-![image](https://user-images.githubusercontent.com/97940850/179960975-880b75ff-9ade-48b8-82d8-157381042a04.png)
-#Importing Image class from PIL module
-from PIL import Image
-import matplotlib.pyplot as plt
-#Opens a image in RGB mode
-im=Image.open('pic15.jpg')
-
-#Size of the image in pixels(size of original image)
-#(This is not mandotory)
-width,height=im.size
-
-#Cropped image of above dimension
-#(It will not change original image)
-im1=im.crop((120,10,250,160))
-
-#shows the image in image viewer
-im1.show()
-plt.imshow(im1)
-plt.show()
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940850/179961181-5c41e111-b724-4403-b17a-bf418dea6714.png)
-
+gamma_correction=((pic/255)**(1/gamma))<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(gamma_correction)<br>
+plt.axis('off');<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/179950978-84f49d7e-2f3f-444b-8a49-eb76297952e0.png)<br>
+<br>
+**24.Program to perform basic image manipulation:a)Sharpness b)Flipping c)Cropping**<br>
+#Image sharpen<br>
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+#Load the image<br>
+my_image=Image.open('pic15.jpg')<br>
+#use sharpen function<br>
+sharp=my_image.filter(ImageFilter.SHARPEN)<br>
+#Save the image<br>
+sharp.save('C:\Rachana.K\image_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/179960022-51bafc82-4eba-4749-969c-e65940b97f36.png)<br>
+#Image flip<br>
+import matplotlib.pyplot as plt<br>
+#Load the image<br>
+img=Image.open('pic15.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+#use the flip function<br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
+<br>
+#save the image<br>
+flip.save('C:\Rachana.K\image_flip.jpg')<br>
+plt.imshow(flip)<br>
+plt.show()<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/179960937-8ad765b7-8089-46ef-a594-844efdc72177.png)<br>
+![image](https://user-images.githubusercontent.com/97940850/179960975-880b75ff-9ade-48b8-82d8-157381042a04.png)<br>
+#Importing Image class from PIL module<br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+#Opens a image in RGB mode<br>
+im=Image.open('pic15.jpg')<br>
+<br>
+#Size of the image in pixels(size of original image)<br>
+#(This is not mandotory)<br>
+width,height=im.size<br>
+<br>
+#Cropped image of above dimension<br>
+#(It will not change original image)<br>
+im1=im.crop((120,10,250,160))<br>
+<br>
+#shows the image in image viewer<br>
+im1.show()<br>
+plt.imshow(im1)<br>
+plt.show()<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940850/179961181-5c41e111-b724-4403-b17a-bf418dea6714.png)<br>
+<br>
 
 
 
