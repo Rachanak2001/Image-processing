@@ -474,7 +474,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940850/178963662-5decba20-37e9-4920-9720-3ebb4e1a58d2.png)<br>
 <br>
 **23. Program to perform basic image data analysis using intensity transformation:**<br>
-**a) Image nagative <br>b)Log Transformation <br> c)Gamma correction<br> d)**<br>
+**a) Image nagative <br>b)Log Transformation <br> c)Gamma correction**<br>
 %matplotlib inline<br>
 import imageio<br>
 import matplotlib.pyplot as plt<br>
