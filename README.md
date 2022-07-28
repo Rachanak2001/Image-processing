@@ -582,6 +582,37 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940850/179961181-5c41e111-b724-4403-b17a-bf418dea6714.png)<br>
 <br>
 
+# Python3 program for printing
+# the rectangular pattern
+ 
+# Function to print the pattern
+def printPattern(n):
+ 
+    arraySize = n * 2 - 1;
+    result = [[0 for x in range(arraySize)]
+                 for y in range(arraySize)];
+         
+    # Fill the values
+    for i in range(arraySize):
+        for j in range(arraySize):
+            if(abs(i - (arraySize // 2)) >
+               abs(j - (arraySize // 2))):
+                result[i][j] = abs(i - (arraySize // 2));
+            else:
+                result[i][j] = abs(j - (arraySize // 2));
+             
+    # Print the array
+    for i in range(arraySize):
+        for j in range(arraySize):
+            print(result[i][j], end = " ");
+        print("");
+ 
+# Driver Code
+n = 4;
+ 
+printPattern(n);
+
+![image](https://user-images.githubusercontent.com/97940850/181431538-d665b23c-b419-4da9-aea7-dd03250cebb7.png)
 
 
 
