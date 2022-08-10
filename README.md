@@ -581,7 +581,7 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940850/179961181-5c41e111-b724-4403-b17a-bf418dea6714.png)<br>
 <br>
-**matrix**<br>
+**Matrix**<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 <br>
