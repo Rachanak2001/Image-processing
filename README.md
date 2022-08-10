@@ -674,5 +674,40 @@ np.max(array_colors)
 **OUTPUT**
 253
 ![image](https://user-images.githubusercontent.com/97940850/183872189-17760000-ada7-4870-ba5a-267393ada4be.png)
+**MINIMUM PIXEL VALUE**
+import numpy as np
+import matplotlib.pyplot as plt
+array_colors = np.array([[[245, 20, 36],
+[10, 215, 30],
+[40, 50, 205]],
+[[70, 50, 10],
+[25, 230, 85],
+[12, 128, 128]],
+[[25, 212, 3],
+[55, 5, 250],
+[240, 152, 25]],
+])
+plt.imshow(array_colors)
+np.min(array_colors)
+**OUTPUT**
+3
+![image](https://user-images.githubusercontent.com/97940850/183873060-75f6a231-c551-40ee-a670-0666030ab63b.png)
+**STANDARD VALUE OF A PIXEL**
+import numpy as np
+import matplotlib.pyplot as plt
+array_colors = np.array([[[245, 20, 36],
+[10, 215, 30],
+[40, 50, 205]],
+[[70, 50, 10],
+[25, 230, 85],
+[12, 128, 128]],
+[[25, 212, 3],
+[55, 5, 250],
+[240, 152, 25]],
+])
+plt.imshow(array_colors)
+np.std(array_colors)
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/183873740-add87c5a-e68f-4858-98fd-949e25706219.png)
 
 
