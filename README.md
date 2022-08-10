@@ -656,6 +656,22 @@ plt.show()<br>
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940850/183865353-1539309c-cc3b-4da9-bcfb-425060bdaac1.png)<br>
 <br>
-
+**MAXIMUM PIXEL VALUE**
+import numpy as np
+import matplotlib.pyplot as plt
+array_colors = np.array([[[245, 20, 36],
+[10, 215, 30],
+[40, 50, 205]],
+[[70, 50, 10],
+[25, 230, 85],
+[12, 128, 128]],
+[[25, 212, 3],
+[55, 5, 253],
+[240, 152, 25]],
+])
+plt.imshow(array_colors)
+np.max(array_colors)
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/183872189-17760000-ada7-4870-ba5a-267393ada4be.png)
 
 
