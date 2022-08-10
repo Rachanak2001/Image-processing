@@ -708,6 +708,7 @@ array_colors = np.array([[[245, 20, 36],
 plt.imshow(array_colors)
 np.std(array_colors)
 **OUTPUT**
+87.50068782798436
 ![image](https://user-images.githubusercontent.com/97940850/183873740-add87c5a-e68f-4858-98fd-949e25706219.png)
 
 
