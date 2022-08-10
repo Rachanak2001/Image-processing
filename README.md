@@ -581,38 +581,59 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940850/179961181-5c41e111-b724-4403-b17a-bf418dea6714.png)<br>
 <br>
-
-**Python3 program for printing**
-**the rectangular pattern**
- **Function to print the pattern**
-def printPattern(n):
- 
-    arraySize = n * 2 - 1;
-    result = [[0 for x in range(arraySize)]
-                 for y in range(arraySize)];
-         
-    #Fill the values
-    for i in range(arraySize):
-        for j in range(arraySize):
-            if(abs(i - (arraySize // 2)) >
-               abs(j - (arraySize // 2))):
-                result[i][j] = abs(i - (arraySize // 2));
-            else:
-                result[i][j] = abs(j - (arraySize // 2));
-             
-    #Print the array
-    for i in range(arraySize):
-        for j in range(arraySize):
-            print(result[i][j], end = " ");
-        print("");
- 
- #Driver Code
-n = 4;
- 
-printPattern(n);
-
-![image](https://user-images.githubusercontent.com/97940850/181431538-d665b23c-b419-4da9-aea7-dd03250cebb7.png)
-
+**matrix**<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+<br>
+arr = np.zeros((256,256,3), dtype=np.uint8)<br>
+imgsize = arr.shape[:2]<br>
+innerColor = (255, 255, 255)<br>
+outerColor = (0, 0, 0)<br>
+for y in range(imgsize[1]):<br>
+    for x in range(imgsize[0]):<br>
+        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
+        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
+        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+        arr[y, x] = (int(r), int(g), int(b))<br>
+plt.imshow(arr, cmap='gray')<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/97940850/183863922-b07650ab-751f-458d-9b97-3fbb951a558a.png)<br>
+<br>
+<br>
+<br>
+**Python3 program for printing**<br>
+**the rectangular pattern**<br>
+ **Function to print the pattern**<br>
+def printPattern(n):<br>
+ <br>
+    arraySize = n * 2 - 1;<br>
+    result = [[0 for x in range(arraySize)]<br>
+                 for y in range(arraySize)];<br>
+         <br>
+    #Fill the values<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            if(abs(i - (arraySize // 2)) ><br>
+               abs(j - (arraySize // 2))):<br>
+                result[i][j] = abs(i - (arraySize // 2));<br>
+            else:<br>
+                result[i][j] = abs(j - (arraySize // 2));<br>
+             <br>
+    #Print the array<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            print(result[i][j], end = " ");<br>
+        print("");<br>
+ <br>
+ #Driver Code<br>
+n = 4;<br>
+ <br>
+printPattern(n);<br>
+<br>
+![image](https://user-images.githubusercontent.com/97940850/181431538-d665b23c-b419-4da9-aea7-dd03250cebb7.png)<br>
+<br>
 
 
 
