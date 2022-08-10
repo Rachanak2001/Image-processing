@@ -581,7 +581,7 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940850/179961181-5c41e111-b724-4403-b17a-bf418dea6714.png)<br>
 <br>
-**.Matrix**<br>
+**•Matrix**<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 <br>
@@ -634,25 +634,25 @@ printPattern(n);<br>
 <br>
 ![image](https://user-images.githubusercontent.com/97940850/181431538-d665b23c-b419-4da9-aea7-dd03250cebb7.png)<br>
 <br>
-**.Program to generate matrix to image**
-from PIL import Image
-import numpy as np
-import matplotlib.pyplot as plt
-w, h = 600, 600
-data = np.zeros((h, w, 3), dtype=np.uint8)
-data[0:100, 0:100] = [255, 0, 0]
-data[100:200, 100:200] = [0,255, 0]
-data[200:300, 200:300] = [0, 0, 255]
-data[300:400, 300:400] = [255, 70, 0]
-data[400:500, 400:500] = [255,120, 0]
-data[500:600, 500:600] = [ 255, 255, 0]
-#len width
-img = Image.fromarray(data, 'RGB')
-plt.imshow(img)
-plt.axis("off")
-plt.show()
-![image](https://user-images.githubusercontent.com/97940850/183865353-1539309c-cc3b-4da9-bcfb-425060bdaac1.png)
-
+**Program to generate matrix to image**<br><br>
+from PIL import Image<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+w, h = 600, 600<br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:100, 0:100] = [255, 0, 0]<br>
+data[100:200, 100:200] = [0,255, 0]<br>
+data[200:300, 200:300] = [0, 0, 255]<br>
+data[300:400, 300:400] = [255, 70, 0]<br>
+data[400:500, 400:500] = [255,120, 0]<br>
+data[500:600, 500:600] = [ 255, 255, 0]<br>
+#len width<br>
+img = Image.fromarray(data, 'RGB')<br>
+plt.imshow(img)<br>
+plt.axis("off")<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/97940850/183865353-1539309c-cc3b-4da9-bcfb-425060bdaac1.png)<br>
+<br>
 
 
 
