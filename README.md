@@ -581,7 +581,7 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940850/179961181-5c41e111-b724-4403-b17a-bf418dea6714.png)<br>
 <br>
-**•Matrix**<br>
+**Matrix**<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 <br>
@@ -599,6 +599,7 @@ for y in range(imgsize[1]):<br>
         arr[y, x] = (int(r), int(g), int(b))<br>
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
+OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940850/183863922-b07650ab-751f-458d-9b97-3fbb951a558a.png)<br>
 <br>
 <br>
@@ -632,9 +633,10 @@ n = 4;<br>
  <br>
 printPattern(n);<br>
 <br>
+OUTPUT)<br>
 ![image](https://user-images.githubusercontent.com/97940850/181431538-d665b23c-b419-4da9-aea7-dd03250cebb7.png)<br>
 <br>
-**Program to generate matrix to image**<br><br>
+**Program to generate matrix to image**<br>
 from PIL import Image<br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
@@ -651,6 +653,7 @@ img = Image.fromarray(data, 'RGB')<br>
 plt.imshow(img)<br>
 plt.axis("off")<br>
 plt.show()<br>
+OUTPUT)<br>
 ![image](https://user-images.githubusercontent.com/97940850/183865353-1539309c-cc3b-4da9-bcfb-425060bdaac1.png)<br>
 <br>
 
