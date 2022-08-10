@@ -653,7 +653,7 @@ img = Image.fromarray(data, 'RGB')<br>
 plt.imshow(img)<br>
 plt.axis("off")<br>
 plt.show()<br>
-OUTPUT)<br>
+OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940850/183865353-1539309c-cc3b-4da9-bcfb-425060bdaac1.png)<br>
 <br>
 
