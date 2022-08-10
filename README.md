@@ -672,6 +672,7 @@ array_colors = np.array([[[245, 20, 36],
 plt.imshow(array_colors)
 np.max(array_colors)
 **OUTPUT**
+253
 ![image](https://user-images.githubusercontent.com/97940850/183872189-17760000-ada7-4870-ba5a-267393ada4be.png)
 
 
