@@ -711,4 +711,32 @@ np.std(array_colors)<br>
 87.50068782798436<br>
 ![image](https://user-images.githubusercontent.com/97940850/183873740-add87c5a-e68f-4858-98fd-949e25706219.png)<br>
 <br>
+**EDGE DETECTION**
+#(c) Edge detection using prewitt operator
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+img=cv2.imread('img1.jpg')
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+img_gaussian=cv2.GaussianBlur(gray,(3,3),0)
+
+#prewitt
+kernelx=np.array([[1,1,1],[0,0,0],[-1,-1,-1]])
+kernely=np.array([[-1,0,1],[-1,0,1],[-1,0,1]])
+img_prewittx=cv2.filter2D(img_gaussian,-1,kernelx)
+img_prewitty=cv2.filter2D(img_gaussian,-1,kernely)
+
+cv2.imshow("Original Image",img)
+cv2.imshow("prewitt x",img_prewittx)
+cv2.imshow("prewitt y",img_prewitty)
+cv2.imshow("Prewitt",img_prewittx+img_prewitty)
+cv2.waitKey()
+cv2.destroyAllWindows()
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/97940850/187903636-2cfb9319-76e7-40fc-aa07-81b4ba1b5b3d.png)
+![image](https://user-images.githubusercontent.com/97940850/187903734-f3c5978d-6165-43cd-a9f5-1de212a01e07.png)
+![image](https://user-images.githubusercontent.com/97940850/187903801-04758ac0-3481-441c-a39f-49f7ea2cf128.png)
+![image](https://user-images.githubusercontent.com/97940850/187903870-baab474f-69cf-4b9c-959f-ffa58ed6ffd7.png)
+
+
 
